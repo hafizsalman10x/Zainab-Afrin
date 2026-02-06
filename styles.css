@@ -60,23 +60,25 @@ body {
 }
 
 .profile-ring {
-    border: 4px solid #FFD700;
-    border-radius: 50%;
+    position: relative;
     padding: 5px;
-    animation: shimmer 2s infinite linear;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD700, #ffae00, #FFD700);
+    animation: rotateRing 6s linear infinite;
+}
+
+@keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .profile-ring img {
-    border-radius: 50%;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
     object-fit: cover;
-}
-
-@keyframes shimmer {
-    0% { box-shadow: 0 0 10px #FFD700; }
-    50% { box-shadow: 0 0 25px #FFD700; }
-    100% { box-shadow: 0 0 10px #FFD700; }
+    background: #111;
+    padding: 3px;
 }
 
 /* Heading */
@@ -86,9 +88,9 @@ body {
     margin: 10px 0;
 }
 
-/* Trust */
+/* Trust (CHANGED TO WHITE) */
 .trust {
-    color: #00FF7F;
+    color: #ffffff;
     margin-bottom: 18px;
     font-size: 14px;
 }
@@ -110,12 +112,15 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* WhatsApp Icon */
 .tg-icon {
-    width: 20px;
-    height: 20px;
-    fill: white;
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    flex-shrink: 0;
 }
 
+/* Hover */
 .telegram-btn:hover {
     transform: scale(1.07);
     box-shadow: 0 0 25px #25D366, 0 0 50px rgba(37, 211, 102, 0.6);
@@ -127,7 +132,7 @@ body {
         box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px #25D366, 0 0 40px rgba(37, 211, 102, 0.7);
+        box-shadow: 0 0 22px #25D366, 0 0 44px rgba(37, 211, 102, 0.7);
     }
     100% {
         box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
