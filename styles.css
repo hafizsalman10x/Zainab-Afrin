@@ -28,7 +28,7 @@ body {
 .gold-glow {
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle, rgba(255,223,0,0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,223,0,0.18) 0%, transparent 70%);
     z-index: -1;
 }
 
@@ -40,7 +40,7 @@ body {
     max-width: 420px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 0 40px rgba(255, 223, 0, 0.3);
+    box-shadow: 0 0 40px rgba(255, 223, 0, 0.28);
 }
 
 .luxury-float {
@@ -49,27 +49,42 @@ body {
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Profile */
 .profile-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .profile-ring {
-    position: relative;
     padding: 5px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #FFD700, #ffae00, #FFD700);
-    animation: rotateRing 6s linear infinite;
+    background: linear-gradient(
+        135deg,
+        #FFD700,
+        #ffcf40,
+        #FFD700
+    );
+    box-shadow:
+        0 0 18px rgba(255, 215, 0, 0.6),
+        0 0 40px rgba(255, 215, 0, 0.25);
+    animation: premiumGlow 3.5s ease-in-out infinite;
 }
 
-@keyframes rotateRing {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@keyframes premiumGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 16px rgba(255, 215, 0, 0.55),
+            0 0 38px rgba(255, 215, 0, 0.22);
+    }
+    50% {
+        box-shadow:
+            0 0 26px rgba(255, 215, 0, 0.8),
+            0 0 60px rgba(255, 215, 0, 0.35);
+    }
 }
 
 .profile-ring img {
@@ -88,7 +103,7 @@ body {
     margin: 10px 0;
 }
 
-/* Trust (CHANGED TO WHITE) */
+/* Trust */
 .trust {
     color: #ffffff;
     margin-bottom: 18px;
@@ -108,7 +123,9 @@ body {
     padding: 14px 24px;
     border-radius: 50px;
     margin-bottom: 18px;
-    box-shadow: 0 0 15px #25D366, 0 0 30px rgba(37, 211, 102, 0.5);
+    box-shadow:
+        0 0 15px #25D366,
+        0 0 30px rgba(37, 211, 102, 0.45);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -122,20 +139,28 @@ body {
 
 /* Hover */
 .telegram-btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 25px #25D366, 0 0 50px rgba(37, 211, 102, 0.6);
+    transform: scale(1.06);
+    box-shadow:
+        0 0 24px #25D366,
+        0 0 50px rgba(37, 211, 102, 0.6);
 }
 
 /* Pulse Animation */
 @keyframes pulseGlow {
     0% {
-        box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
+        box-shadow:
+            0 0 10px #25D366,
+            0 0 20px rgba(37, 211, 102, 0.4);
     }
     50% {
-        box-shadow: 0 0 22px #25D366, 0 0 44px rgba(37, 211, 102, 0.7);
+        box-shadow:
+            0 0 22px #25D366,
+            0 0 44px rgba(37, 211, 102, 0.65);
     }
     100% {
-        box-shadow: 0 0 10px #25D366, 0 0 20px rgba(37, 211, 102, 0.5);
+        box-shadow:
+            0 0 10px #25D366,
+            0 0 20px rgba(37, 211, 102, 0.4);
     }
 }
 
