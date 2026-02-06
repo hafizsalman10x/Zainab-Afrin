@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zainab Afreen</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="background"></div>
+<div class="gold-glow"></div>
+
+<main class="card luxury-float">
+
+    <div class="profile-wrapper">
+        <div class="profile-ring shimmer">
+            <img src="profile.jpg" alt="Profile">
+        </div>
+    </div>
+
+    <h1 class="gold-text">ZAINAB AFREEN</h1>
+
+    <p class="trust">✅ Trusted by 12,000+ investors</p>
+
+    <!-- WhatsApp Button (ABOVE LIVE VIEWERS) -->
+    <a href="https://wa.me/+917449470836/?text=*READY-TO-INVEST"
+       class="telegram-btn telegram-pulse"
+       target="_blank">
+
+        <svg class="tg-icon" viewBox="0 0 32 32">
+            <path d="M16 3C9.37 3 4 8.37 4 15c0 2.64.86 5.07 2.32 7.03L4 29l7.14-2.27A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3z"/>
+        </svg>
+
+        <span>Message me on WhatsApp</span>
+    </a>
+
+    <!-- Live Viewers -->
+    <div class="subscriber-box">
+        <span class="count" id="viewerCount">78</span>
+        <span class="label">Live Viewers Right Now</span>
+    </div>
+
+    <div class="badge-row">
+        <span class="badge">24/7 Updates</span>
+        <span class="badge">Free to Join</span>
+    </div>
+
+    <!-- VIDEO BELOW BADGES -->
+    <div class="video-wrapper">
+        <video autoplay muted loop controls playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="features">
+        <div class="feature">✅ Practical Strategies</div>
+        <div class="feature">✅ Learn with Experts</div>
+        <div class="feature">✅ Market Insights & Discussions</div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong><br>
+        This website is for WhatsApp only. Text me on WhatsApp to learn and earn.
+    </div>
+
+    <footer>
+        © 2026 Zainab Afreen<br>
+        <a href="https://wa.me/+917449470836/?text=*READY-TO-INVEST" target="_blank">
+            Official WhatsApp
+        </a>
+    </footer>
+
+</main>
+
+<script>
+let viewers = 78;
+const viewerCounter = document.getElementById("viewerCount");
+
+setInterval(() => {
+    viewers += Math.floor(Math.random() * 5 - 2);
+    if (viewers < 95) viewers = 95;
+    viewerCounter.innerText = viewers;
+}, 3000);
+</script>
+
+</body>
+</html>
