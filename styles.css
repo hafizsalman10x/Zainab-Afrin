@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #07090e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #111, #000);
+    z-index: -2;
+}
+
+.gold-glow {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,215,0,0.15), transparent);
+    z-index: -1;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(15, 15, 15, 0.9);
+    padding: 28px 22px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(255,215,0,0.15);
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.profile-ring {
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, gold, #ffcc00);
+}
+
+.profile-ring img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gold-text {
+    color: gold;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.trust {
+    margin: 10px 0 18px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* WhatsApp Button */
+.telegram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    padding: 14px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.telegram-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.telegram-pulse {
+    animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
+    70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* Live viewers */
+.subscriber-box {
+    background: #111;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.count {
+    color: gold;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Badges */
+.badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.badge {
+    background: #222;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Video */
+.video-wrapper {
+    margin-bottom: 18px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255,215,0,0.25);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    background: black;
+}
+
+/* Features */
+.features {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.feature {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Footer */
+.disclaimer {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 16px;
+}
+
+footer {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #777;
+}
+
+footer a {
+    color: gold;
+    text-decoration: none;
+}
